@@ -246,6 +246,12 @@ header nav a:hover{color:var(--ink)}
 .rev .who{display:flex;gap:10px;align-items:center;font-weight:700}
 .rev .who span{width:40px;height:40px;border-radius:50%;background:var(--sky);display:grid;place-items:center}
 
+.rev-one{max-width:720px;margin:0 auto;display:grid;gap:22px;justify-items:center;text-align:center}
+.rev-one .rev{margin:0;border-style:solid;background:var(--paper);padding:34px 36px;justify-items:center}
+.rev-one blockquote{margin:0;font-size:1.3rem;font-weight:600;line-height:1.45;color:var(--ink);text-wrap:balance}
+.rev-cta{display:grid;gap:10px;justify-items:center}
+.rev-cta p{color:var(--muted);font-size:.95rem;margin:0}
+
 /* FAQ */
 .faq{max-width:820px;margin:0 auto}
 details{border-bottom:1px solid var(--line)}
@@ -527,11 +533,17 @@ footer .areas span{border:1px solid var(--line);border-radius:999px;padding:2px 
 
   <section style="padding-top:0">
     <div class="wrap">
-      <div class="head"><span class="pill">Reviews</span><h2 style="margin-top:16px">What homeowners say</h2><p>Real Google reviews will appear here.</p></div>
-      <div class="rev-grid">
-        <div class="rev"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p><span class="ph">Customer review from Google</span></p><div class="who"><span>A</span>Customer name, City</div></div>
-        <div class="rev"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p><span class="ph">Customer review from Google</span></p><div class="who"><span>B</span>Customer name, City</div></div>
-        <div class="rev"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p><span class="ph">Customer review from Google</span></p><div class="who"><span>C</span>Customer name, City</div></div>
+      <div class="head"><span class="pill">Reviews</span><h2 style="margin-top:16px">What homeowners say</h2><p>From our Google reviews.</p></div>
+      <div class="rev-one">
+        <figure class="rev">
+          <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote>&ldquo;Daniel is very easy to work with. He is very efficient and his work was amazing!&rdquo;</blockquote>
+          <figcaption class="who"><span>S</span>Sofiya L. &middot; Google review</figcaption>
+        </figure>
+        <div class="rev-cta">
+          <a class="btn ghost" href="https://maps.google.com/?cid=15466717394683437734" target="_blank" rel="noopener">See our reviews on Google</a>
+          <p>Worked with us? We&rsquo;d love to hear how it went.</p>
+        </div>
       </div>
     </div>
   </section>
