@@ -107,9 +107,8 @@ header nav a:hover{color:var(--ink)}
 .hdr-cta .btn{padding:11px 18px;font-size:.92rem;border-radius:10px}
 
 /* Hero */
-.hero{position:relative;padding:56px 0 80px;overflow:hidden;background:
-  linear-gradient(90deg,color-mix(in srgb,var(--sky) 97%,transparent) 0%,color-mix(in srgb,var(--sky) 90%,transparent) 38%,color-mix(in srgb,var(--sky) 45%,transparent) 62%,color-mix(in srgb,var(--sky) 10%,transparent) 100%),
-  url("images/full/front-after.webp") center 40%/cover no-repeat var(--sky)}
+.hero{position:relative;padding:56px 0 80px;overflow:hidden;background:url("images/full/front-after.webp") center 40%/cover no-repeat var(--sky)}
+.hero-copy{background:var(--paper);border-radius:22px;padding:34px 36px;box-shadow:0 30px 70px -30px rgba(42,18,32,.45),0 0 0 1px var(--line)}
 .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:52px;align-items:center}
 .hero p.sub{font-size:1.15rem;color:var(--muted);margin-top:20px}
 .perks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px}
@@ -277,7 +276,7 @@ footer .areas span{border:1px solid var(--line);border-radius:999px;padding:2px 
 
 
 @media (max-width:980px){
-  .hero{background:linear-gradient(180deg,color-mix(in srgb,var(--sky) 92%,transparent),color-mix(in srgb,var(--sky) 86%,transparent)),url("images/full/front-after.webp") center/cover no-repeat var(--sky)}
+  .hero-copy{padding:26px 22px}
   header nav,.hdr-cta .call .num{display:none}
   .hero .wrap,.ba-wrap,.promise{grid-template-columns:1fr}
   .svc-grid,.rev-grid{grid-template-columns:1fr 1fr}
@@ -336,7 +335,7 @@ footer .areas span{border:1px solid var(--line);border-radius:999px;padding:2px 
 <main id="top">
   <section class="hero" style="padding-top:56px">
     <div class="wrap">
-      <div>
+      <div class="hero-copy">
         <span class="pill">Now booking free in-home estimates</span>
         <h1 style="margin-top:18px">Beautiful new windows and doors. <span class="hl">A quote you can trust.</span></h1>
         <p class="sub">Tell us about your project in under a minute. Our window experts call you back to set up a free visit, then give you one clear, all-in quote.</p>
