@@ -107,10 +107,18 @@ header nav a:hover{color:var(--ink)}
 .hdr-cta .btn{padding:11px 18px;font-size:.92rem;border-radius:10px}
 
 /* Hero */
-.hero{position:relative;padding:56px 0 80px;overflow:hidden;background:url("images/full/front-after.webp") center 40%/cover no-repeat var(--sky)}
-.hero-copy{background:var(--paper);border-radius:22px;padding:34px 36px;box-shadow:0 30px 70px -30px rgba(42,18,32,.45),0 0 0 1px var(--line)}
-.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:52px;align-items:center}
-.hero p.sub{font-size:1.15rem;color:var(--muted);margin-top:20px}
+.hero{position:relative;padding:110px 0 170px;overflow:hidden;color:#fff;text-align:center;background:linear-gradient(rgba(16,12,15,.6),rgba(16,12,15,.6)),url("images/full/front-after.webp") center 40%/cover no-repeat #2a2a2a}
+.hero-in{max-width:960px;display:flex;flex-direction:column;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4.6rem);margin-top:22px;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero .pill{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3)}
+.hero .perks{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 32px;margin-top:30px}
+.hero .perks li{font-size:.85rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:36px}
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+.hero .btn.ghost:hover{border-color:#fff}
+.qsec{position:relative;z-index:2;margin-top:-110px;padding:0 0 40px}
+.qsec .qb{max-width:640px;margin:0 auto}
+.hero p.sub{font-size:1.2rem;color:rgba(255,255,255,.88);margin:22px auto 0;max-width:60ch}
 .perks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px}
 .perks li{display:flex;gap:10px;align-items:center;font-weight:600}
 .perks li::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
@@ -276,9 +284,9 @@ footer .areas span{border:1px solid var(--line);border-radius:999px;padding:2px 
 
 
 @media (max-width:980px){
-  .hero-copy{padding:26px 22px}
+  .hero{padding:72px 0 140px}
   header nav,.hdr-cta .call .num{display:none}
-  .hero .wrap,.ba-wrap,.promise{grid-template-columns:1fr}
+  .ba-wrap,.promise{grid-template-columns:1fr}
   .svc-grid,.rev-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr}
   .steps::before{display:none}
@@ -333,22 +341,26 @@ footer .areas span{border:1px solid var(--line);border-radius:999px;padding:2px 
 </header>
 
 <main id="top">
-  <section class="hero" style="padding-top:56px">
-    <div class="wrap">
-      <div class="hero-copy">
-        <span class="pill">Now booking free in-home estimates</span>
-        <h1 style="margin-top:18px">Beautiful new windows and doors. <span class="hl">A quote you can trust.</span></h1>
-        <p class="sub">Tell us about your project in under a minute. Our window experts call you back to set up a free visit, then give you one clear, all-in quote.</p>
-        <ul class="perks">
-          <li>No-pressure, free in-home estimate</li>
-          <li>One clear, all-in price with no surprise fees</li>
-          <li>Installed by our own crew, most homes in 1&ndash;2 days</li>
-        </ul>
-        <div class="proof">
-          <div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <b class="ph">X.X</b><small>from <span class="ph">XX</span> Google reviews</small></div>
-        </div>
+  <section class="hero">
+    <div class="wrap hero-in">
+      <span class="pill">Now booking free in-home estimates</span>
+      <h1>Beautiful New Windows &amp; Doors, Installed Right</h1>
+      <p class="sub">Serving the Bay Area, Sacramento &amp; Lake Tahoe. Our window experts call you back, set up a free visit and give you one clear, all-in quote.</p>
+      <ul class="perks">
+        <li>Free in-home estimate</li>
+        <li>All-in pricing</li>
+        <li>Our own crew</li>
+        <li>Energy efficient</li>
+      </ul>
+      <div class="hero-ctas">
+        <a class="btn" href="#quote">Get my free quote</a>
+        <a class="btn ghost" href="tel:+19168488440">Call (916) 848-8440</a>
       </div>
+    </div>
+  </section>
 
+  <section class="qsec" aria-label="Free quote request">
+    <div class="wrap">
       <div class="qb" id="quote" aria-label="Free quote request">
         <div class="qb-top"><b>Get your free quote</b><span id="qcount">Step 1 of 4</span></div>
         <div class="bar"><i id="qbar"></i></div>
