@@ -166,7 +166,8 @@ header nav a:hover{color:var(--ink)}
 .qsec .qb{max-width:640px;margin:0 auto}
 .hero p.sub{font-size:1.2rem;color:rgba(255,255,255,.88);margin:22px auto 0;max-width:60ch}
 .perks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px}
-.perks li{display:flex;gap:10px;align-items:center;font-weight:600}
+.perks li{display:flex;gap:10px;align-items:center;font-weight:600;flex-shrink:0}
+.perks li::before{min-width:22px}
 .perks li::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
 .proof{display:flex;align-items:center;gap:14px;margin-top:30px;flex-wrap:wrap}
 .faces{display:flex}
@@ -370,10 +371,10 @@ footer .areas span{border:1px solid var(--line);border-radius:999px;padding:2px 
 }
 @media (max-width:560px){
   .hero p.sub{font-size:1.02rem;margin-top:16px}
-  .hero .perks{flex-wrap:nowrap;gap:12px;margin-top:20px}
+  .hero .perks{flex-wrap:wrap;gap:8px 14px;margin-top:20px}
   .hero .perks .lg{display:none}
-  .hero .perks li{font-size:.72rem;letter-spacing:.06em;white-space:nowrap;gap:6px}
-  .hero .perks li::before{flex-basis:16px;height:16px;background-size:10px}
+  .hero .perks li{flex:0 0 auto;font-size:.72rem;letter-spacing:.06em;white-space:nowrap;gap:6px}
+  .hero .perks li::before{flex:0 0 16px;width:16px;min-width:16px;height:16px;background-size:10px}
   .hero-ctas{margin-top:24px}
   .logo img{height:38px}
   .svc-grid,.rev-grid,.promise ul,footer .cols{grid-template-columns:1fr}
