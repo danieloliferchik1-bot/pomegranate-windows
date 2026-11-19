@@ -387,6 +387,23 @@ footer .areas span{border:1px solid var(--line);border-radius:999px;padding:2px 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media (max-width:370px){.hero p.sub{font-size:.94rem}}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1123632380551358');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1123632380551358&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -699,7 +716,7 @@ footer .areas span{border:1px solid var(--line);border-radius:999px;padding:2px 
       document.getElementById('doneT').textContent='Thanks, '+nm.split(' ')[0]+'!';
       next.disabled=true; next.textContent='Sending…';
       fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(new FormData(form)).toString()})
-        .then(function(r){ if(!r.ok) throw 0; })
+        .then(function(r){ if(!r.ok) throw 0; try{ if(window.fbq) fbq('track','Lead',{content_name:'Quote request'}); }catch(e){} })
         .catch(function(){ document.getElementById('doneP').innerHTML='We couldn\u2019t send your request online. Please call us at <b>(916) 848-8440</b> and we\u2019ll get you scheduled.'; })
         .then(function(){ next.disabled=false; show(cur+1); });
       return;
