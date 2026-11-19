@@ -369,6 +369,12 @@ footer .areas span{border:1px solid var(--line);border-radius:999px;padding:2px 
   .promise{padding:36px;justify-items:start}
 }
 @media (max-width:560px){
+  .hero p.sub{font-size:1.02rem;margin-top:16px}
+  .hero .perks{flex-wrap:nowrap;gap:12px;margin-top:20px}
+  .hero .perks .lg{display:none}
+  .hero .perks li{font-size:.72rem;letter-spacing:.06em;white-space:nowrap;gap:6px}
+  .hero .perks li::before{flex-basis:16px;height:16px;background-size:10px}
+  .hero-ctas{margin-top:24px}
   .logo img{height:38px}
   .svc-grid,.rev-grid,.promise ul,footer .cols{grid-template-columns:1fr}
   .count{grid-template-columns:1fr 1fr}
@@ -414,12 +420,11 @@ footer .areas span{border:1px solid var(--line);border-radius:999px;padding:2px 
   <section class="hero">
     <div class="wrap hero-in">
       <h1>Beautiful New Windows &amp; Doors, Installed Right</h1>
-      <p class="sub">Over 14 years installing windows across Greater Sacramento, with service throughout the Bay Area and Lake Tahoe too. Our window experts call you back, set up a free visit and give you one clear, all-in quote.</p>
+      <p class="sub">Serving Greater Sacramento, the Bay Area and Lake Tahoe. Our window experts call you back with one clear, all-in quote.</p>
       <ul class="perks">
-        <li>14+ years experience</li>
-        <li>Free in-home estimate</li>
-        <li>All-in pricing</li>
-        <li>Our own crew</li>
+        <li>14+ years<span class="lg">&nbsp;experience</span></li>
+        <li>Free estimates</li>
+        <li><span class="lg">Our&nbsp;</span>own crew</li>
       </ul>
       <div class="hero-ctas">
         <a class="btn" href="#quote">Get my free quote</a>
