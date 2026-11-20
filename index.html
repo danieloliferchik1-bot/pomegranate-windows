@@ -47,6 +47,14 @@
     },
     {
       "@type": "Question",
+      "name": "Do you offer any discounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Replace 12 or more windows plus a patio door and you save 10% on your entire order. The discount is built right into your clear, all-in quote."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How long does installation take?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -181,6 +189,9 @@ header nav a:hover{color:var(--ink)}
 .qb-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .qb-top b{font-size:1.25rem;letter-spacing:-.02em}
 .qb-top span{font-size:.85rem;color:var(--muted);font-weight:600}
+.deal{display:flex;align-items:center;gap:10px;margin:14px 0 18px;padding:10px 14px;border-radius:12px;background:var(--accent-soft);color:var(--ink);font-size:.95rem;line-height:1.35}
+.deal svg{flex:none;width:22px;height:22px}
+.deal b{color:var(--accent)}
 .bar{height:6px;background:var(--sky);border-radius:99px;overflow:hidden;margin:12px 0 22px}
 .bar i{display:block;height:100%;width:25%;background:var(--accent);border-radius:99px;transition:width .3s}
 .qstep{display:none}
@@ -452,6 +463,7 @@ src="https://www.facebook.com/tr?id=1123632380551358&ev=PageView&noscript=1"
       <div class="qb" id="quote" aria-label="Free quote request">
         <div class="qb-top"><b>Get your free quote</b><span id="qcount">Step 1 of 4</span></div>
         <div class="bar"><i id="qbar"></i></div>
+        <p class="deal"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg><span><b>Save 10%</b> on your whole order with 12+ windows and a&nbsp;patio&nbsp;door.</span></p>
         <form id="qform" name="quote" method="POST" data-netlify="true" netlify-honeypot="company" novalidate>
           <input type="hidden" name="form-name" value="quote">
           <p hidden><label>Leave this empty <input name="company"></label></p>
@@ -644,6 +656,7 @@ src="https://www.facebook.com/tr?id=1123632380551358&ev=PageView&noscript=1"
       <div class="faq">
         <details><summary>Do you install outside the Sacramento area?</summary><p>Yes. We are based in the Sacramento area and also install windows and doors throughout the San Francisco Bay Area and the California side of Lake Tahoe. Estimates are free in all of these areas.</p></details>
         <details open><summary>How much does window replacement cost?</summary><p>Price depends on size, frame material and glass package. We give you a clear, written quote at a free in-home estimate, with no pressure to sign that day.</p></details>
+        <details><summary>Do you offer any discounts?</summary><p>Yes. Replace 12 or more windows plus a patio door and you save 10% on your entire order. The discount is built right into your clear, all-in quote.</p></details>
         <details><summary>How long does installation take?</summary><p>A typical home of 8 to 12 windows is finished in one or two days. Patio and entry doors usually take half a day each.</p></details>
         <details><summary>Will new windows lower my energy bill?</summary><p>Yes. Double-pane, low-E, argon-filled windows cut drafts and heat transfer compared with old single-pane or failed-seal units.</p></details>
         <details><summary>Do you offer a warranty?</summary><p>Every install includes a manufacturer warranty on the product and our own workmanship warranty on the installation.</p></details>
